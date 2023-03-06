@@ -44,3 +44,37 @@ def sayMy(name,age,man=True):
 
 sayMy("김그린",22)
 sayMy("이블루",30,False)
+
+#12345를 인수로 받아서 [5,4,3,2,1] 리턴
+# int("100") --> 정수로 형변환
+# list() --> 리스트로 형변환
+# str() --> 문자로 형변환
+def solution(n):
+    answer = []
+    for i in str(n):
+        answer.append(int(i))
+    answer.reverse()
+    return answer
+print(solution(12345))
+
+
+#연습 문제
+# 인수로 주는 모든 수의 평균 값을 구하는 함수를 작성하시오
+# def avgNumber():
+
+
+# avgNumber(1,2,3)
+# avgNumber(5,6,8,9,8)
+def avgNumber(*args):
+    resum = 0
+    for i in args:
+        sum += i
+    avgre = sum / len(args)
+    return avgre
+
+print(avgNumber(1,2,3))
+print(avgNumber(5,6,7,8,9,10))
+
+#람다 함수
+#lambda 매개변수1, 매개변수2 : 매개변수를 사용한 표현식
+lambdaadd = lambda a,b : a+b
